@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+<div class="container sectionarticles">
+  <div class="row">
+    <h1>Toutes les actualités</h1>
+    {{form_start(form)}}
+    
+    {{form_end(form)}}
+  </div>
+</div>
+<div class="container cardarticles">
+  <div class="row">
+  {% for article in articles %}
+  <div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ asset('/images/article/'~ article.imagename)}}" alt="image de l'article">
+      <div class="card-body">
+        <h5 class="card-title">{{article.titrearticlea}}</h5>
+        <p class="card-text">{{article.resumearticlea}}</p>
+        <a href={{ asset('/accueil/'~ article.id)}} class="btn">Lire la suite</a>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+
+  </div>
+</div>
+{% endblock %}

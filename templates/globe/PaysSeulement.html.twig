@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le globe{% endblock %}
+
+
+{% block body %}
+<div class="container payssingle">
+    <div class="row">
+        <h1>{{Pays.titrepaysc}}</h1>
+        <h2> Capitale : {{Pays.capitalec}}</h2>
+        <p>{{Pays.descpaysc|raw}}</p>
+        <p>Les regions pour ce pays sont, pour le moment, pas disponibles</p><a href={{ asset("/editeur/"~ Pays.id)}}><button type="button" class="btn btn-primary">modifier</button></a>
+    </div>
+</div>
+{% endblock %}

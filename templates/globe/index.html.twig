@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le globe{% endblock %}
+
+{% block body %}
+<section>
+<div class="container Articlegeoid">
+    <div class="row">
+    <h2>Les pays disponibles sur geoguessr</h2>
+    {{form(form)}}
+    </div>
+</div>
+<div class="container descriptionpays">
+    <div class="row">
+    {% for pays in Pays %}
+    <div class="col-lg-4 cardpays">
+        <figure> 
+            <a href={{ asset("/globe/"~ pays.id)}} class="card-link"><img src="{{ asset("/images/article/"~ pays.imagename)}}" alt="image pays"></a>
+                <div class="textpays">
+                    <a href={{ asset("/globe/"~ pays.id)}} class="card-link"><figcaption><h5 class="card-title">{{pays.titrepaysc}}</h5></figcaption></a>
+                    <figcaption>{{pays.capitalec}}</figcaption>
+                    <figcaption> Se renseigner...</figcaption>
+                </div>
+        </figure>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+</section>
+{% endblock %}

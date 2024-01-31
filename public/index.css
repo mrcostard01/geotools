@@ -1,0 +1,469 @@
+
+html{
+   --background-color:   #fceed1;
+background-color: var(--background-color);
+--text-color: black;
+--title-color: #7d3cff;
+--main-color: white;
+}
+
+header  .navbar .collapse .navbar-nav a:hover{
+    color: var(--title-color);
+}
+header  .navbar .collapse .navbar-nav .dropdown ul{
+    background-color: var(--background-color);
+    
+}
+header  .navbar .collapse .navbar-nav .dropdown ul li{
+    color: var(--text-color);
+}
+section{
+    margin-bottom: 2%;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+
+div{
+    color: var(--text-color);
+}
+.introductionsite{
+    margin-top: 2%;
+}
+
+.descriptiongeotool{
+    text-align: center;
+    border-radius: 10px;
+    background-color:var(--main-color);
+    margin-bottom: 2%;
+}
+.descriptionglobe{
+    
+    text-align: center;
+    border-radius: 10px;
+    background-color:var(--main-color);
+}
+.descriptionglobe .row a{
+    text-decoration: unset;
+    color: var(--text-color);
+}
+
+.navbar{
+    color: var(--title-color);
+    background-color: var(--main-color);
+}
+body{background-color: transparent;}
+
+.Articlegeoid{
+    margin-top: 2%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+}
+.sectionarticles{
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+    margin-top: 2%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+footer{
+    display: table-row;
+    height: 0;
+    background-color: var(--main-color);
+}
+.Articlegeoid .row .descriptionArticle a {
+    text-decoration: unset;
+    color: var(--text-color);
+}
+.Articlegeoid .row .descriptionArticle{
+    border-radius: 10px;
+}
+
+.container .row .editeurtexte{
+    background-color: var(--title-color);
+}
+.containerinscription {
+    width:35%;
+}
+
+.Articlegeoid .row .divimgarticle .imagesarticles {
+    flex: center;
+    max-width :90%;
+    max-height: 90%;
+    margin: 10%;
+}
+.cardarticles .row .col-lg-4 .card .card-img-top{
+    width: 286px;
+    height: 257px;
+}
+.cardarticles .row .col-lg-4 .card .card-body a{
+text-decoration: unset;
+color : var(--text-color)
+}
+.cardarticles .row .col-lg-4 .card   {
+    margin: 4%;
+    background-color: var(--main-color);
+    margin-top: 4%;
+}
+.descriptionpays .row{
+    margin-top:5% ;
+    margin-bottom:50% ;
+}
+.descriptionpays .row .cardpays figure img{
+    width: 100%;
+    
+}
+
+.descriptionpays .row .cardpays figure{
+    width:50%;
+    
+}
+.descriptionpays{
+   
+    border-radius: 10px;
+}
+
+.icones {
+ margin-top: 3%;
+ text-align: center;   
+}
+
+.icones {
+    text-align: center;   
+   }
+
+.pasdemodifications {
+    text-align: center;
+    font-size: 150%;
+}
+.descriptionpays .row .cardpays .card{
+    background-color: white;
+} 
+.descriptionpays .row .cardpays figure a{
+    text-decoration: unset;
+    color: var(--title-color);
+}
+.descriptionpays .row .cardpays figure img{
+    border-radius: 10px;
+
+}
+
+
+.descriptionpays .row .cardpays figure .textpays{
+    position:absolute;
+    border-radius: 10px;
+    color:white;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}    
+
+.descriptionpays .row .cardpays figure .textpays a figcaption h5{
+color:white;
+}    
+
+.Articletailleaccueil:hover{
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@media only screen and (min-width: 320px)  {
+    .navbar div div ul li .boutonconnexion {
+        margin-top:5%;
+    }
+    .descriptionArticle img{
+        max-width: 300px;
+    }
+    .descriptionpays .row .cardpays figure img{
+    
+        width: 254px;
+        height: 348px;
+    }
+.descriptionpays .row .cardpays figure .textpays{
+    font-size: 75%;
+    bottom: 4%;
+    width: 79.1%;
+
+}
+
+.Articlegeoid .row .divimgarticle{
+    
+    border-right-style:none;
+    
+    
+    
+}
+.tabGeoTooltitremilieugauche{
+    visibility:hidden;
+}
+.tabGeoTooltitregauche{
+    visibility: hidden;
+}
+.tabGeoTooltitremilieudroit{
+    visibility: hidden;
+}
+.tabGeoTooltitredroite{
+    visibility: hidden;
+}
+.tabGeoTooldroite{
+    margin-bottom: 5%;
+}
+}
+@media only screen and (min-width: 375px)  {
+    .descriptionpays .row .cardpays figure .textpays{
+        font-size: 75%;
+        bottom: 4%;
+        width: 67%;
+    }
+
+}
+   
+    @media only screen and (min-width: 425px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 59%;
+        }
+    }    
+    @media only screen and (min-width: 426px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            
+            width: 59%
+        }
+    }
+    
+    @media only screen and (min-width: 429px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            width: 58%;
+        }
+    }
+    @media only screen and (min-width: 475px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            width: 52.5%;
+        }
+    }
+    @media only screen and (min-width: 500px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 50%;
+        }
+    }
+   
+    @media only screen and (min-width: 510px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 47%;
+        }
+    }
+   
+    @media only screen and (min-width: 513px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 49%;
+        }
+    }
+    @media only screen and (min-width: 530px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 47%;
+        }
+    }
+    @media only screen and (min-width: 560px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            
+            width: 44.5%;
+        }
+    }
+    @media only screen and (min-width: 580px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            
+            width: 46.5%;
+        }
+    }
+    @media only screen and (min-width: 600px)  {
+        .descriptionpays .row .cardpays figure .textpays{
+            bottom: 4.5%;
+            width: 47%;
+        }
+    }
+@media only screen and (min-width: 768px)  {
+    .descriptionArticle img{
+        max-width: 700px;
+    }
+    .descriptionpays .row .cardpays figure .textpays{
+         font-size: 100%;
+         width: 35%;
+         bottom:3.3% ;
+    }
+
+    
+    
+        
+}
+
+@media only screen and (min-width: 992px)  {
+    .navbar div div ul li .boutonconnexion {
+        margin-left:5%;
+    }
+    .descriptionArticle img{
+        max-width: 900px;
+    }
+    .descriptionpays .row .cardpays figure .textpays{
+            font-size: 100%;
+            width: 79%;
+    }
+    .Articlegeoid .row .divimgarticle{
+        
+        border-bottom-style:none;
+        border-right-style:solid;
+        border-right-width: 10px ;
+        border-color: var(--background-color);
+        
+        
+    }
+    .tabGeoTooltitremilieugauche{
+        visibility:visible;
+}
+.tabGeoTooltitregauche{
+    visibility:visible;
+}
+.tabGeoTooltitremilieudroit{
+    visibility:visible;
+}
+.tabGeoTooltitredroite{
+    visibility:visible;
+}
+.tabGeoTooldroite{
+    margin-bottom: 0%;
+
+}
+.tabGeoTooldroite button{
+    margin-top: 50%;
+    
+}
+.tabGeoToolgauche h1{
+    margin-top: 50%;
+    
+}
+    .tabGeoToolgauche{
+   
+        border-right: solid;
+        border-top: solid;
+        text-align: center;
+    }
+    .tabGeoTooldroite{
+        border-left: solid;
+        border-top: solid;
+        text-align: center;
+        justify-content: center;
+    }
+    .tabGeoTooltitregauche{
+    
+        border-right: solid;
+        
+        text-align: center;
+    }
+    .tabGeoTooltitremilieugauche{
+        text-align: center;
+        border-right: solid;
+        
+    }
+    .tabGeoTooltitremilieudroit{
+        text-align: center;
+        
+        
+    }
+    .tabGeoToolmilieudroit{
+        text-align: center;
+        border-top: solid;
+        
+    }
+    .tabGeoToolmilieugauche{
+        text-align: center;
+        border-right: solid;
+        border-top: solid;
+    }
+    .tabGeoTooltitredroite{
+        border-left: solid;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 1200px)  {
+    .descriptionArticle img{
+        max-width: 1000px;
+    }
+    .descriptionpays .row .cardpays figure .textpays{
+            font-size: 100%;
+            width: 67%;
+    }
+}
+@media only screen and (min-width: 1440px)  {
+
+    .descriptionpays .row .cardpays figure .textpays{
+            font-size: 100%;
+            width: 57.5%;
+            bottom: 4%;
+    }
+    
+    .containermodifications{
+        margin-top: 5%;
+    }
+    .tabGeoTooldroite button{
+        margin-top:25%;
+        
+    }
+    .tabGeoToolgauche h1{
+        margin: 21%;
+        
+    }
+    
+}
+.descriptionpays .row .cardpays {
+    position: relative;
+    border-radius: 10px;
+} 
+.Modificateur_carte .row form div .mb-3 .form-control{
+    color:black
+}
+.Modificateur_carte .row form div .mb-3 label{
+    visibility: hidden;
+}
+
+.editeurtexte .row .col-lg-6 form .mb-3 label{
+    visibility: hidden;
+}
+.editeurtexte .row .col-lg-6 form .mb-3 .form-control{
+    visibility: hidden;
+}*/
+.payssingle .row {
+    color: black;
+}
+
+.connexion {
+    
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.connexion .row form a{
+    margin-top: 2%;
+    
+}
+.tabGeoTool {
+    
+    text-align: center;
+    border-top: solid;
+}
+
+.boutonannulation {
+    visibility: hidden;
+}
+.boutonvalidation {
+    visibility: hidden;
+}
+.idform {
+    visibility: hidden;
+}
+

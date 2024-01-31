@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section>
+        {% for flash in app.flashes('success') %}
+            <div class="alert alert-success">{{ flash }}</div>
+        {% endfor %}
+    <div class="container introductionsite">
+        <div class="row">
+            <div class="container descriptiongeotool">
+                <div class="row">
+                <h1> Quel est le but de geotools</h1>
+                <p>L'objectif de geotools est de repertorier un maximum d'informations afin que les joueurs géoguessr puissent s'améliorer</p>
+            </div>
+        </div>
+
+    <div class="container descriptionglobe">
+            <div class="row">
+                <a href="/globe"><h2>Découvrez les astuces pour vous reperer dans un pays avec la page globetrotter</h2></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container sectionarticles">
+        <div class="row">
+            <h2> Voici nos derniers Articles !</h2>
+        </div>
+    </div>
+{% for article in articles|slice(0,3) %}
+    <div class="container Articlegeoid">
+        <div class="row Articletailleaccueil">
+            <div class="col-md-2 divimgarticle">
+                <img class="imagesarticles" src="{{ asset('/images/article/'~ article.imagename) }}" alt="image de l'article">
+            </div>
+            <div class="col-md-10 descriptionArticle">
+                <a href={{ asset("/accueil/"~ article.id)}}><h2>{{article.titrearticlea}}</h2></a>
+                <p>{{article.resumearticlea}}</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+{% endfor %}
+</section>
+
+{% endblock %}
+

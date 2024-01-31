@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editeur{% endblock %}
+
+{% block body %}
+{% set foo = Regions.descregionsr|raw %}
+{% set fooid = Regions.id %}
+
+    
+<div class="container">
+    <div class="row">
+        <h1>{{Regions.regionstitrer}} </h1>
+    </div>
+</div>
+<div class="container Modificateur_carte">
+    <div class="row"> 
+        {{ form_start(formModifications)}}
+        {{ form_row(formModifications.ancienneidregions, {value: fooid}) }}
+        {{ form_row(formModifications.modifregionsdescm, {value: foo}) }}
+        {{ form_end(formModifications)}}
+    </div>
+</div>
+
+<script>
+CKEDITOR.instances['form_modifregionsdescm'].setData('{{Regions.descregionsr|raw}}');
+document.getElementById('form_ancienneidregions').value = '{{Regions.id}}';
+</script>
+ 
+{% endblock %}

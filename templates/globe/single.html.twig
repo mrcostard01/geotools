@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le globe{% endblock %}
+
+{% block body %}
+<div class="container payssingle">
+    <div class="row">
+        <h1>{{Pays.titrepaysc}}</h1>
+        <h2> Capitale : {{Pays.capitalec}}</h2>
+        <p>{{Pays.descpaysc|raw}}</p>
+        {% if app.user %}
+            <a href={{ asset("/editeur/"~ Pays.id)}}><button type="button" class="btn btn-secondary">Rajouter/Modifier des informations</button></a>
+        {% endif %}
+        {% if not app.user %}
+        <p>Vous pouvez apportez vos connaissance sur ce pays en vous inscrivant <a href={{ asset("/inscription/")}}>ici</a> ou en vous connectant <a href={{ asset("/connexion/")}}>ici</a></p>
+        {% endif %}
+        <p>Regions : {% for region in Regions  %} <a href= {{ asset("/regions/"~ region.id)}}>{{region.regionstitrer}}</a></p> {% endfor %}
+       {# <button class="btn btn-danger" name="Supprimer" onclick="{{supprimerpays}}">Supprimer le pays</button>#}
+    </div>
+</div>
+{% endblock %}

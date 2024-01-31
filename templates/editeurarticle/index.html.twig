@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EditeurarticleController!{% endblock %}
+
+{% block body %}
+
+<div class="container contenuearticle">
+    <div class="row">
+        {{ form_start(formArticles)}}
+        {{ form_widget(formArticles)}}
+        {{ form_end(formArticles)}}
+    </div>
+</div>
+<script>
+ CKEDITOR.config.enterMode = CKEDITOR.ENTER_P;
+ </script>
+
+{% endblock %}

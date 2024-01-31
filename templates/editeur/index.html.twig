@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}editeur{% endblock %}
+{% set foo = Pays.descpaysc|raw %}
+{% set bar = Pays.id %}
+
+{% block body %}
+
+
+<div class="container">
+  <div class="row">
+    <h1>{{Pays.titrepaysc}}</h1>
+    <h2>{{Pays.capitalec}}</h2>
+  </div>
+</div>
+<div class="container Modificateur_carte">
+  <div class="row"> 
+    {{ form_start(formModifications)}}
+  {#  {{ form_row(formModifications)}}#}
+    {{ form_row(formModifications.modifpaysdescm, {value: foo}) }}
+    <div style="display: none">{{ form_row(formModifications.ancienneidpays, {value: bar})}}</div>
+    {{ form_end(formModifications)}}
+  </div>
+</div>
+<script>
+{#CKEDITOR.instances['form_modifpaysdescm'].setData('{{Pays.descpaysc|raw}}');#}
+
+ {#CKEDITOR.instances['form_modifpaysdescm'].setData('bonjour');#}
+ {# document.getElementById('form_ancienneidpays').value = '{{Pays.id}}';#}
+</script>
+{% endblock %}

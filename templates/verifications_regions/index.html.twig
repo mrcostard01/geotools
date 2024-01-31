@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}vérifications description pays{% endblock %}
+
+{% block body %}
+
+
+
+{{ form_start(formModifications)}}
+  {#Entêtes du tableau#}
+
+    <div class="container containermodifications">
+
+      <div class="d-lg-flex">
+        <div class="col-lg-3 tabGeoTooltitregauche">
+          <h2>Regions</h1>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitremilieugauche">
+          <h2>Description de la region</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitremilieudroit">
+          <h2>Modification proposée</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitredroite">
+          <h3>Action</h3>
+        </div>
+  </div>
+  {% for region in Regions %} 
+  {% for modifregion in ModifRegions %} 
+  {% if modifregion.ancienneidregions == region.id %}
+
+ 
+      <div class="d-lg-flex">
+        <div class="col-lg-3 tabGeoToolgauche">
+          <h1>{{region.regionstitrer}}</h1>
+        </div>
+        <div class="col-lg-3 tabGeoToolmilieugauche">
+          <p>{{region.descregionsr|raw}}</p>
+        </div>
+        <div class="col-lg-3 tabGeoToolmilieudroit">
+          <p>{{modifregion.modifregionsdescm|raw}}</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooldroite">
+        
+          <button type="submit" onclick="getElementById('form_id').value = {{modifregion.id}}" id="{{modifregion.id}}" name="form[Valider]" class="btn-primary btn">Valider</button>
+          <button class="btn btn-Danger" onclick="getElementById('form_id').value = {{modifregion.id}}" name="form[Effacer]">Effacer </button>
+        </div>
+      </div>
+    
+{% endif %}
+{% endfor %}
+{% endfor %}
+</div>
+ {{ form_end(formModifications)}}
+  
+{#
+{% for modifregion in ModifRegions %}
+{% for region in Regions  %}  
+     
+  {% if modifregion.ancienneidregions == region.id and modifregion.modifregionsdescm != null %}
+     
+     
+
+    <div class="container editeurtexte" style="background-color:transparent;">
+        <div class="row">
+          <div class="col-lg-6" >
+            <h2>{{region.regionstitrer}}</h2>
+            <p>{{region.descregionsr|raw}}</p>
+          </div>
+
+            <div class="col-lg-6">
+               {{ form_start(formModifications)}}
+                {{ form_end(formModifications)}}
+            </div>
+        </div>
+    </div>
+    <script> document.getElementById('form_ancienneidregions').value = '{{modifregion.ancienneidregions}}';
+    
+    document.getElementById('form_id').value = '{{modifregion.id}}';
+   </script>
+    <script>CKEDITOR.instances['form_modifregionsdescm'].setData('{{modifregion.modifregionsdescm|raw}}')</script>
+    
+    {% endif %}
+    
+    {% endfor %}
+ 
+  {% endfor %}
+
+    
+ 
+
+</div>
+</div>
+#}
+
+
+{% endblock %}

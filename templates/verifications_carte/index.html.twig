@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}vérifications description pays{% endblock %}
+
+{% block body %}
+
+ {{ form_start(formModifications)}}
+  {#Entêtes du tableau#}
+    <div class="container containermodifications">
+
+      <div class="d-lg-flex">
+        <div class="col-lg-3 tabGeoTooltitregauche">
+          <h2>Pays</h1>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitremilieugauche">
+          <h2>Description du pays</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitremilieudroit">
+          <h2>Modification proposée</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooltitredroite">
+          <h3>Action</h3>
+        </div>
+  </div>
+  {% for pay in Pays %} 
+  {% for modifpay in ModifPays %} 
+  {% if modifpay.ancienneidpays == pay.id %}
+
+ 
+      <div class="d-lg-flex">
+        <div class="col-lg-3 tabGeoToolgauche">
+          <h1>{{pay.titrepaysc}}</h1>
+        </div>
+        <div class="col-lg-3 tabGeoToolmilieugauche">
+          <p>{{pay.descpaysc|raw}}</p>
+        </div>
+        <div class="col-lg-3 tabGeoToolmilieudroit">
+          <p>{{modifpay.modifpaysdescm|raw}}</p>
+        </div>
+        <div class="col-lg-3 tabGeoTooldroite">
+        
+          <button type="submit" onclick="getElementById('form_id').value = {{modifpay.id}}" id="{{modifpay.id}}" name="form[Valider]" class="btn-primary btn">Valider</button>
+          <button class="btn btn-Danger" onclick="getElementById('form_id').value = {{modifpay.id}}" name="form[Effacer]">Effacer </button>
+        </div>
+      </div>
+    
+{% endif %}
+{% endfor %}
+{% endfor %}
+</div>
+ {{ form_end(formModifications)}}
+
+{#<div class="container">
+  <div class="row">
+   
+    {% for pay in Pays %} Boucle qui parcourt les lignes de la table modifications quand Région est null un truc comme
+    {% for modifpay in ModifPays %} 
+    {% if modifpay.ancienneidpays == pay.id %}
+    <div class="container editeurtexte" style="background-color:transparent;">
+      <div class="row">
+        <div class="col-lg-6" >
+          <h2>{{pay.titrepaysc}}</h2>
+          <p>{{pay.descpaysc|raw}}</p>
+        </div>
+        <div class="col-lg-6">
+            {{ form_start(formModifications)}}
+            {{ form_end(formModifications)}}
+        </div>
+      </div>
+    </div>
+    <script>
+CKEDITOR.instances['form_modifpaysdescm'].setData('{{modifpay.modifpaysdescm|raw}}')
+</script>
+    <script> document.getElementById('form_ancienneidpays').value = '{{modifpay.ancienneidpays}}';
+    document.getElementById('form_id').value = '{{modifpay.id}}';
+    </script>
+     
+   {% endif %}
+  
+   {% endfor %}
+   
+   {% endfor %}
+
+
+#}
+
+
+
+
+
+{% endblock %}
